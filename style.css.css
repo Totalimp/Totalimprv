@@ -1,0 +1,709 @@
+
+/* RESET GERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total dos elementos */
+}
+
+/* CORPO DA PÁGINA */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #002366; /* Azul escuro */
+  font-family: 'Arial Rounded MmoT Bold', Arial, sans-serif; /* Fonte geral da página */
+}
+
+/* BARRA AZUL (Cabeçalho superior) */
+.barra-azul {
+  background-color: #002366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 110px;
+  padding: 10px 30px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 0px;
+  height: 115px;
+  position: relative;
+  z-index: 10;
+}
+
+header {
+  position: fixed; /* Fixa no topo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* LOGO DA EMPRESA */
+.logo {
+  position: absolute;
+  top: 5px;
+  left: 180px;
+  width: 90px;
+  z-index: 20;
+}
+
+/* MENU DE NAVEGAÇÃO */
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+/* serviços barra azul*/
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* BOTÃO WHATSAPP COM EFEITO NEON */
+.whatsapp-neon {
+  position: absolute;
+  top: 30px;
+  right: 180px;
+  background-color: #002366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  border: 2px solid #00ff00; /* Borda verde neon */
+  box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;/* Brilho neon */
+  text-align: center;
+  display: inline-block;
+  line-height: 1.2;
+  transition: transform 0.3s ease;
+  animation: pulsar 3s infinite ease-in-out; 
+}
+
+.whatsapp-neon:hover {
+  transform: scale(1.1);
+}
+
+/* ANIMAÇÃO DO BOTÃO */
+@keyframes pulsar {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+  }
+}
+
+/* SWIPER SLIDE 2 PARTE IMAGENS */
+.swiper {
+  width: 100%;
+  height: auto;
+  max-height: 667px; /* aumenta ou diminiu tamanho doss slides*/
+  overflow: hidden;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* TÍTULO DA SEÇÃO DE SERVIÇOS - PARTE 3*/
+.titulo-servicos {
+  text-align: center;
+  font-size: 40px; /* TAMANHO TITULO SERVIÇO OFERECIDO*/
+  font-weight: bold;
+  color: white;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  font-family: 'Arial Rounded MT Bold', Arial, sans-serif;
+}
+
+
+.faixa-servicos {
+  background-color: #002366;     /* fundo azul escuro */
+  padding: 10px 50px 150px 20px; /* top, right, bottom, left */
+  margin-top: 0;                 /* nada de espaço externo em cima */
+}
+
+/* CONTAINER DOS CARDS */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 0 40px 100px; /* aumenta tamanho da barra azul */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* CARD INDIVIDUAL */
+.card-servico {
+  background-color: white;
+  color: #002366;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: 20px 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-servico:hover {
+  transform: scale(1.05);x
+  box-shadow: 0 0 25px rgba(0, 255, 0, 0.4);
+}
+
+.card-servico h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.card-servico p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* ÍCONE */
+.icone-servico {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* BOTÃO */
+.botao-saber-mais {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 30px;
+  background-color: #002366;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  border: 2px solid #00ff00;
+  box-shadow: 0 0 10px #00ff00;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.botao-saber-mais:hover {
+  background-color: #00ff00;
+  color: #002366;
+  transform: scale(1.05);
+}
+
+
+/* PARTE 4 - FRASE SLOGAN */
+.bloco-frase-total-limp {
+   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 01;
+  gap: 60px;
+  padding: 90px 40px 70px;
+  flex-wrap: wrap;
+  text-align: left;
+  margin-top: -500px; /* alinhamento tamanho barra azul serviços */
+  padding-left: 320px; /* alinhamento com os cards e logo */
+}
+
+/* 🔳 Faixa branca atrás do mascote e da frase */
+.faixa-branca-fundo {
+  background-color: white;     /* 🎨 cor da faixa */
+  height: 500px;               /* 📏 altura da faixa branca */
+  position: absolute;          /* 🧲 fixa na posição */
+  top: 1500px;                  /* 📍 ajusta a distância a partir do topo — AQUI VOCÊ CONTROLA */
+  left: 0;
+  width: 100%;
+  z-index: 1;                  /* 🔙 deixa atrás de tudo */
+}
+
+@media (max-width: 768px) {
+  .bloco-frase-total-limp {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+
+
+  .mascote {
+    margin-top: 30px;
+  }
+}
+
+.frase {
+  pointer-events: none;
+  max-width: 480px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.frase h1 {
+  font-size: 44px;
+  line-height: 1.2;
+  font-weight: 900;
+  font-family: 'Arial', sans-serif;
+  margin: 0 0 25px 0;
+}
+
+.frase .azul-escuro {
+  color: #004494;
+  font-weight: 900;
+}
+
+.frase .rosa {
+  color: #eb0d8c;
+  font-weight: 900;
+}
+
+.mascote img {
+  max-width: 450px; /*aumenta tamanho do mascote*/
+
+}
+
+.cta-orcamento {
+  margin-top: 5px;               /* espaço abaixo da frase */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;                      /* espaço entre botão e seta */
+}
+
+/* Botão chamativo */
+.botao-com-seta {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px; /* sobe mais se quiser */
+}
+
+.seta-fora {
+  position: relative;
+  margin-right: 100px; /* aproxima ou afasta da esquerda do botão */
+  font-size: 26px;
+  color: #00ff00;
+  top: 2px; /* ajusta finamente pra alinhar no meio do botão */
+}
+
+.botao-chamada {
+  background-color: #00ff00;
+  color: #660000;
+  padding: 14px 24px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  box-shadow: 0 0 15px #00ff00;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.botao-chamada:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #00ff00, 0 0 35px #00ff00;
+}
+
+.cta-orcamento {
+  position: relative;
+  z-index: 1;
+  pointer-events: auto; /* mantém o botão funcionando */
+}
+
+/* Setinha animada */
+.seta-animada {
+  font-size: 30px;
+  color: #00ff00;
+  animation: moverSeta 1.2s infinite alternate ease-in-out;
+  margin-left: 90px;
+}
+
+@keyframes moverSeta {
+  from { transform: translateY(0); }
+  to   { transform: translateY(10px); }
+}
+
+.mascote {
+  position: relative;
+  top: 80 px;       /* sobe o mascote */
+  left: -320px;       /* empurra ele para a direita */
+}
+
+
+.frase {
+  pointer-events: none; /* impede a frase de bloquear clique */
+}
+
+.bloco-frase-total-limp {
+  position: relative;
+  z-index: 1;
+  pointer-events: none; /* Impede que essa seção bloqueie os cliques abaixo */
+border-radius: 0 0 60px 60px; /* Deixa arredondado embaixo, se quiser mais suave */
+}
+}
+
+.bloco-frase-total-limp .frase,
+.bloco-frase-total-limp .slogan,
+.bloco-frase-total-limp .cta-orcamento,
+.bloco-frase-total-limp .botao-chamada {
+  pointer-events: auto; /* Ativa o clique normalmente só nesses elementos */
+}
+
+/* === CSS DEPOIMENTOS  === */
+
+.depoimentos {
+  padding: 20px 10px 80px; /* Espaçamento interno */
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+  margin-top: -200px; /* Sobe a seção dos depoimentos */
+}
+
+.card-depoimento {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+
+.titulo-depoimentos {
+  color: white;
+  font-size: 1.8rem; /* ou experimente 2rem se quiser um meio termo */
+  font-weight: bold;
+  margin-bottom: 30px;  /* Espaçamento entre titulo e card depoimento */
+}
+
+.depoimentos-swiper {
+  max-width: 700px; /* Largura máxima do slider */
+  margin: 0 auto;
+  position: relative; /* Necessário para as setas se posicionarem em relação a este bloco */
+}
+
+.swiper-slide.card-depoimento {
+ 
+  border-radius: 20px; /* Borda arredondada */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.estrelas {
+  font-size: 2rem;
+  color: #f4c542; /* Cor dourada das estrelas */
+  margin-bottom: 20px;
+}
+
+.texto {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #002060; /* Azul escuro */
+  margin-bottom: 10px;
+}
+
+.cliente {
+  font-size: 1rem;
+  color: #002060;
+  font-weight: bold;
+}
+
+/* ===== SETAS ===== */
+
+.mySwiper {
+  position: relative; /* ESSENCIAL para as setas ficarem no meio do slide */
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #007bff; /* azul para combinar com o visual */
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  z-index: 10;
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Setas mais para fora do card */
+.swiper-button-prev {
+  left: 10px; /* ou ajuste conforme o espaço que quiser nas laterais */
+}
+
+
+.swiper-button-next {
+  right: 10px;
+}
+
+/* ===== BOLINHAS DE PAGINAÇÃO ===== */
+/* BOLINHAS */
+.swiper-pagination.depoimentos-pagination {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.swiper-pagination-bullet {
+  background-color: #ccc; /* Cinza claro */
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #007bff; /* Azul quando está ativa */
+}
+
+/* RESPONSIVO - some as setas no celular */
+@media screen and (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+}
+
+/* Setas personalizadas fora do card */
+.depoimentos-prev,
+.depoimentos-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 30px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+/* Seta esquerda */
+.depoimentos-prev {
+  left: 50px; /* Fora do card */
+}
+
+/* Seta direita */
+.depoimentos-next {
+  right: -60px; /* Fora do card */
+}
+
+/* Esconde setas no mobile */
+@media screen and (max-width: 768px) {
+  .depoimentos-prev,
+  .depoimentos-next {
+    display: none;
+  }
+}
+
+
+/* Seção Instagram */
+.instagram-section {
+  background-color: #fff8f0; /* fundo suave */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.instagram-title {
+  font-size: 32px;
+  color: #002366; /* azul escuro Total Limp */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.instagram-sub {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto 30px;
+}
+
+.instagram-grid img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.instagram-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Botão */
+.btn-center {
+  text-align: center;
+}
+
+.btn-instagram {
+  background-color: #ff69b4; /* rosa para destacar */
+  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-instagram:hover {
+  background-color: #e04a9b;
+}
+
+
+/* Seção Instagram */
+.instagram-section {
+  background-color: #fff8f0; /* fundo suave */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.instagram-title {
+  font-size: 32px;
+  color: #002366; /* azul escuro Total Limp */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.instagram-sub {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto 30px;
+}
+
+.instagram-grid img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.instagram-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Botão */
+.btn-center {
+  text-align: center;
+}
+
+.btn-instagram {
+  background-color: #ff69b4; /* rosa para destacar */
+  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-instagram:hover {
+  background-color: #e04a9b;
+}
+
+
+
+/* SEÇÃO DO FORMULÁRIO DE CONTATO */
+.contato-section {
+  background-color: #001F5C; /* azul escuro Total Limp */
+  color: #fff; /* texto branco */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contato-section h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.contato-section p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.form-contato {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-contato input,
+.form-contato textarea {
+  padding: 15px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  width: 100%;
+}
+
+.form-contato textarea {
+  border-radius: 20px;
+  resize: none;
+}
+
+.form-contato button {
+  background-color: #00FF38; /* verde neon */
+  color: #fff;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-contato button:hover {
+  background-color: #00cc2c;
+}
