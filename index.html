@@ -214,17 +214,23 @@
   </div>
 </section>
 
- <!-- seção email -->
+ !-- seção email -->
+  
+<form action="https://formsubmit.co/totalimprv@gmail.com" method="POST" class="form-contato">
+  <input type="text" name="name" placeholder="Seu nome" required>
+  <input type="email" name="email" placeholder="Seu e-mail" required>
+  <textarea name="message" placeholder="Sua mensagem" rows="4" required></textarea>
 
-<section class="contato-section">
-  <h2>Entre em contato conosco!</h2>
-  <p>Envie sua dúvida, sugestão ou solicite um orçamento personalizado.</p>
- <form action="https://formsubmit.co/totalimprv%40gmail.com" method="POST" class="form-contato">
-    <input type="text" name="name" placeholder="Seu nome" required>
-    <input type="email" name="email" placeholder="Seu e-mail" required>
-    <textarea name="message" placeholder="Sua mensagem" rows="4" required></textarea>
-    <button type="submit">ENVIAR MENSAGEM</button>
-  </form>
+  <!-- Redireciona para a página de obrigado -->
+  <input type="hidden" name="_next" value="https://totalimp.github.io/obrigado.html">
+
+  <!-- Campos ocultos úteis -->
+  <input type="hidden" name="_subject" value="Nova mensagem do site Total Limp!">
+  <input type="hidden" name="_captcha" value="false">
+
+  <button type="submit">ENVIAR MENSAGEM</button>
+</form>
+
 </section>
 
   
